@@ -1,0 +1,27 @@
+export type Verb={infinitive:string;past:string;participle:string;spanish:string;example:string;exampleEs:string};
+export const verbs:Verb[]=[
+{infinitive:'be',past:'was/were',participle:'been',spanish:'ser / estar',example:'I was at school yesterday.',exampleEs:'Ayer estuve en el instituto.'},
+{infinitive:'become',past:'became',participle:'become',spanish:'convertirse',example:'She became a doctor.',exampleEs:'Ella se hizo médica.'},
+{infinitive:'begin',past:'began',participle:'begun',spanish:'empezar',example:'The lesson began at nine.',exampleEs:'La clase empezó a las nueve.'},
+{infinitive:'break',past:'broke',participle:'broken',spanish:'romper',example:'He broke the window.',exampleEs:'Él rompió la ventana.'},
+{infinitive:'bring',past:'brought',participle:'brought',spanish:'traer',example:'Bring your notebook, please.',exampleEs:'Trae tu cuaderno, por favor.'},
+{infinitive:'buy',past:'bought',participle:'bought',spanish:'comprar',example:'I bought a new book.',exampleEs:'Compré un libro nuevo.'},
+{infinitive:'come',past:'came',participle:'come',spanish:'venir',example:'They came by bus.',exampleEs:'Vinieron en autobús.'},
+{infinitive:'do',past:'did',participle:'done',spanish:'hacer',example:'We did our homework.',exampleEs:'Hicimos los deberes.'},
+{infinitive:'drink',past:'drank',participle:'drunk',spanish:'beber',example:'She drank some water.',exampleEs:'Ella bebió agua.'},
+{infinitive:'eat',past:'ate',participle:'eaten',spanish:'comer',example:'He ate an apple.',exampleEs:'Él se comió una manzana.'},
+{infinitive:'feel',past:'felt',participle:'felt',spanish:'sentir(se)',example:'I felt happy.',exampleEs:'Me sentí feliz.'},
+{infinitive:'find',past:'found',participle:'found',spanish:'encontrar',example:'She found her keys.',exampleEs:'Ella encontró sus llaves.'},
+{infinitive:'get',past:'got',participle:'got/gotten',spanish:'conseguir / obtener',example:'I got a message.',exampleEs:'Recibí un mensaje.'},
+{infinitive:'give',past:'gave',participle:'given',spanish:'dar',example:'He gave me a present.',exampleEs:'Me dio un regalo.'},
+{infinitive:'go',past:'went',participle:'gone',spanish:'ir',example:'We went to the park.',exampleEs:'Fuimos al parque.'},
+{infinitive:'have',past:'had',participle:'had',spanish:'tener',example:'They had lunch at home.',exampleEs:'Almorzaron en casa.'},
+{infinitive:'know',past:'knew',participle:'known',spanish:'saber / conocer',example:'I knew the answer.',exampleEs:'Sabía la respuesta.'},
+{infinitive:'make',past:'made',participle:'made',spanish:'hacer / fabricar',example:'She made a cake.',exampleEs:'Ella hizo un pastel.'},
+{infinitive:'read',past:'read',participle:'read',spanish:'leer',example:'I read the story.',exampleEs:'Leí el cuento.'},
+{infinitive:'run',past:'ran',participle:'run',spanish:'correr',example:'He ran very fast.',exampleEs:'Él corrió muy rápido.'},
+{infinitive:'say',past:'said',participle:'said',spanish:'decir',example:'She said hello.',exampleEs:'Ella dijo hola.'},
+{infinitive:'see',past:'saw',participle:'seen',spanish:'ver',example:'We saw a rainbow.',exampleEs:'Vimos un arcoíris.'},
+{infinitive:'take',past:'took',participle:'taken',spanish:'tomar / llevar',example:'He took the train.',exampleEs:'Él cogió el tren.'},
+{infinitive:'write',past:'wrote',participle:'written',spanish:'escribir',example:'I wrote a letter.',exampleEs:'Escribí una carta.'}
+];
