@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import type { FormEvent } from 'react';
 import { ArrowRight, BookOpen, CheckCircle2, Flame, GraduationCap, Headphones, RotateCcw, Search, Sparkles, Volume2, Zap } from 'lucide-react';
 import { verbs } from './verbs';
 
@@ -16,7 +17,7 @@ export default function App(){
  function start(m:Mode){setMode(m);setIndex(Math.floor(Math.random()*verbs.length));setAnswer('');setFeedback('');setShowAnswer(false);setView('practice')}
  function next(){setIndex(i=>(i+1+Math.floor(Math.random()*Math.max(1,verbs.length-1)))%verbs.length);setAnswer('');setFeedback('');setShowAnswer(false)}
  function speak(text:string){if('speechSynthesis'in window){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-GB';window.speechSynthesis.speak(u)}}
- function check(e:React.FormEvent){e.preventDefault();const accepted=expected.split('/').map(x=>x.trim().toLowerCase());const ok=accepted.includes(answer.trim().toLowerCase());setFeedback(ok?'correct':'wrong');if(ok){const p={xp:progress.xp+10,correct:progress.correct+1,streak:progress.streak+1};setProgress(p);localStorage.setItem(STORE,JSON.stringify(p))}}
+ function check(e:FormEvent){e.preventDefault();const accepted=expected.split('/').map(x=>x.trim().toLowerCase());const ok=accepted.includes(answer.trim().toLowerCase());setFeedback(ok?'correct':'wrong');if(ok){const p={xp:progress.xp+10,correct:progress.correct+1,streak:progress.streak+1};setProgress(p);localStorage.setItem(STORE,JSON.stringify(p))}}
  function reset(){if(window.confirm('¿Quieres reiniciar el progreso guardado en este dispositivo?')){const p={xp:0,correct:0,streak:0};setProgress(p);localStorage.setItem(STORE,JSON.stringify(p))}}
  return <div className="app-shell">
   <header className="topbar"><a className="brand" href="#inicio" onClick={e=>{e.preventDefault();setView('home')}}><span className="brand-mark"><GraduationCap size={24}/></span><span><strong>IES Andrés Benítez</strong><small>ENGLISH LEARNING LAB</small></span></a><nav className="nav-links"><button className={view==='home'?'nav-active':''} onClick={()=>setView('home')}>Inicio</button><button className={view==='practice'?'nav-active':''} onClick={()=>start(mode)}>Practicar</button><button className={view==='dictionary'?'nav-active':''} onClick={()=>setView('dictionary')}>Diccionario</button></nav><div className="mini-level"><Sparkles size={16}/> {progress.xp} XP</div></header>
